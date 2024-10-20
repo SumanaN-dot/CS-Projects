@@ -1,0 +1,4 @@
+ The goal of this project is to give you system programming experience with four le I/O system calls (open, close, read, and
+ write), UNIX le permissions, and dynamic memory allocation and deallocation in C. In this project, you will implement a
+ C program that reads in the contents of two input les. The program will then compare the two les, byte-by-byte, write
+ di erences into two output les, and output timings for the programs two main steps as stated in the projects requirements.
