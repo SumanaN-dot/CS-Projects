@@ -1,0 +1,3 @@
+ The purpose of this assignment is to write a C program that maps out its dynamic memory usage as the program executes
+ to solve a simple problem of computing the average grade of a list of grades and determining which grades are >= or <
+ the average. 
