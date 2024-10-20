@@ -1,0 +1,4 @@
+Purpose: A Java application designed to read in the grade weights
+* for a class and user's known scores for grades, then compute
+* their current average as well as tell them if they can achieve
+* their desired grade.
