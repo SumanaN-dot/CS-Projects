@@ -1,5 +1,0 @@
-{
-  "Design": [".blend", ".step"],
-  "Screenshots": [".png", ".jpg"],
-  "CAD": [".stl", ".obj"]
-}
