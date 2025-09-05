@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Manage Books</title>
+    <link rel="stylesheet" href="../../../styles/globalstyle.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="admin-books.css" />
+    <script src="admin-books.js" defer></script>
+    <script src="../logout_dropdown/logout_dropdown.js" defer></script>
+  </head>
+  <body>
+    <section id="header-message">
+      <p>Admin - Book Management</p>
+    </section>
+
+    <header id="header">
+      <a href="../../../index.html" id="logo">
+        <img
+          src="../../assets/images/site_logo.png"
+          alt="Logo"
+          id="logo-image"
+        />
+        <span>The Book Nook</span>
+      </a>
+      <form
+        action="../searchpage/searchpage.html"
+        method="GET"
+        id="search-form"
+      >
+        <input
+          type="text"
+          name="query"
+          id="search-input"
+          placeholder="Search by Title, Author, Genre, or ISBN"
+        />
+        <button type="submit" id="search-button">&#128269;</button>
+      </form>
+      <section id="header-icons">
+        <div class="header-icon" id="open-login">
+          <img
+            src="../../assets/images/login_logo.png"
+            alt="Login Icon"
+            id="login-icon"
+          />
+          <span>My Account</span>
+        </div>
+
+        <div id="admin-dropdown" class="dropdown hidden">
+          <ul>
+            <li>
+              <a href="admin.html">Admin Dashboard</a>
+            </li>
+            <li class="logout">Logout</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main id="main-content">
+      <div class="admin-container">
+        <h2>Book Management</h2>
+        
+        <!-- Add Book Section -->
+        <div id="add-book">
+          <h3>Add New Book</h3>
+          <form id="add-book-form" class="book-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="title">Title *</label>
+                <input type="text" id="title" name="title" required>
+              </div>
+              <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" name="genre" required>
+              </div>
+              <div class="form-group">
+                <label for="price">Price ($)</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inventory">Inventory</label>
+                <input type="number" id="inventory" name="inventory" min="0" value="0" required>
+              </div>
+              <div class="form-group">
+                <label for="release_date">Release Date</label>
+                <input type="date" id="release_date" name="release_date" required>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="image_url">Image URL</label>
+              <input type="url" id="image_url" name="image_url" placeholder="https://example.com/book-cover.jpg" required>
+            </div>
+
+            <div class="form-row checkbox-row">
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="is_featured" name="is_featured">
+                <label for="is_featured">Featured Book</label>
+              </div>
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="is_coming_soon" name="is_coming_soon">
+                <label for="is_coming_soon">Coming Soon</label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Add Book</button>
+              <button type="reset" class="btn-secondary">Reset Form</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Success/Error Messages -->
+        <div id="message-container" class="message-container hidden">
+          <div id="message" class="message"></div>
+        </div>
+      </div>
+    </main>
+
+
+  </body>
+</html>

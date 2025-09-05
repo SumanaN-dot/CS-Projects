@@ -1,0 +1,29 @@
+.edit-profile-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.edit-profile-container h2 {
+  text-align: center;
+}
+
+.edit-profile-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-profile-container input,
+.edit-profile-container button {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.readonly-field {
+  background-color: #e9e9e9 !important;
+  color: #666 !important;
+  cursor: not-allowed !important;
+  border: 1px solid #ccc !important;
+}

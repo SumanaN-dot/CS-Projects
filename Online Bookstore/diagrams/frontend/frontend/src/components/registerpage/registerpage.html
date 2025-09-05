@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../../../styles/globalstyle.css" />
+    <link rel="stylesheet" href="registerpage.css" />
+    <link rel="stylesheet" href="../loginpage/loginpage.css" />
+    <script src="registerpage.js" defer></script>
+  </head>
+  <body>
+    <section id="header-message">
+      <p>Register Today! Read Forevermore!</p>
+    </section>
+
+    <header id="header">
+      <a href="../../../index.html" id="logo">
+        <img
+          src="../../assets/images/site_logo.png"
+          alt="Logo"
+          id="logo-image"
+        />
+        <span>The Book Nook</span>
+      </a>
+    </header>
+
+    <h1 id="register-title">Register Information</h1>
+    <main id="main-content">
+      <section id="register-info">
+        <form id="register-form">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" required />
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" required />
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone-number">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone-number"
+            name="phone-number"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+            required
+          />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+
+          <label>
+            <input type="checkbox" id="promotional-emails" name="promotional-emails">
+             <span>Sign up for exclusive promotional emails!</span>
+          </label>
+
+          <button class="toggle-btn" type="button" id="toggle-shipping">
+            +Add Shipping Address
+          </button>
+          <div id="shipping-container" style="display: none">
+            <section id="shipping-address">
+              <h2>Shipping Address</h2>
+              <label for="street-address">Street Address:</label>
+              <input
+                type="text"
+                id="street-address"
+                name="street-address"
+              />
+
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" />
+
+              <label for="state">State:</label>
+              <input type="text" id="state" name="state" />
+
+              <label for="zip-code">Zip Code:</label>
+              <input type="text" id="zip-code" name="zip-code" />
+            </section>
+          </div>
+
+          <button class="toggle-btn" type="button" id="toggle-payment">
+            +Add Payment Information
+          </button>
+          <div id="payment-container" style="display: none">
+            <section id="payment-info">
+              <h2>Payment Information</h2>
+              <label for="card-number">Card Number:</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card-number"
+                pattern="[0-9]{16}"
+                placeholder="1234 5678 9012 3456"
+              />
+
+              <label for="expiration-date">Expiration Date:</label>
+              <input
+                type="month"
+                id="expiration-date"
+                name="expiration-date"
+              />
+
+              <label for="cvv">CVV:</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                pattern="[0-9]{3}"
+                placeholder="123"
+              />
+
+              <label for="billing-address">Billing Address:</label>
+              <input
+                type="text"
+                id="billing-address"
+                name="billing-address"
+              />
+            </section>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <img
+          src="../../assets/images/register_pic.png"
+          alt="Register Image"
+          id="register-image"
+        />
+      </section>
+    </main>
+  </body>
+</html>

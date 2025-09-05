@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="../../../styles/globalstyle.css" />
+    <link rel="stylesheet" href="editProfile.css" />
+    <script src="editProfile.js" defer></script>
+    <script src="../logout_dropdown/logout_dropdown.js" defer></script>
+  </head>
+  <body>
+    <section id="header-message">
+      <p>Register Today! Read Forevermore!</p>
+    </section>
+    <header id="header">
+      <a href="../../../index.html" id="logo">
+        <img
+          src="../../assets/images/site_logo.png"
+          alt="Logo"
+          id="logo-image"
+        />
+        <span>The Book Nook</span>
+      </a>
+      <form action="/search" method="GET" id="search-form">
+        <input
+          type="text"
+          name="query"
+          id="search-input"
+          placeholder="Search by Title, Author, Genre, or ISBN"
+        />
+        <button type="submit" id="search-button">&#128269;</button>
+      </form>
+      <section id="header-icons">
+        <div class="header-icon" id="open-login">
+          <img
+            src="../../assets/images/login_logo.png"
+            alt="Login Icon"
+            id="login-icon"
+          />
+          <span id="user-greeting">Login</span>
+        </div>
+
+        <div id="user-dropdown" class="dropdown hidden">
+          <ul>
+            <li>
+              <a href="editProfile.html">Edit Profile</a>
+            </li>
+            <li>
+              <a href="../shoppingcart/shoppingcart.html">Shopping Cart</a>
+            </li>
+            <li>
+              <a href="../orderhistory/orderhistorypage.html">Order History</a>
+            </li>
+            <li class="logout">Logout</li>
+          </ul>
+        </div>
+        <a href="../shoppingcart/shoppingcart.html" class="header-icon">
+          <img
+            src="../../assets/images/cart_logo.png"
+            alt="Cart Icon"
+            id="cart-icon"
+          />
+          <span>Cart (<span id="cart-count">0</span>)</span>
+        </a>
+      </section>
+    </header>
+    <div class="edit-profile-container">
+      <h2>Edit Profile</h2>
+      <form id="editProfileForm">
+        <label>First Name:</label>
+        <input type="text" name="firstName" required />
+
+        <label>Last Name:</label>
+        <input type="text" name="lastName" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" readonly disabled class="readonly-field" />
+
+        <label>Password:</label>
+        <input type="password" name="password" readonly disabled class="readonly-field" />
+        <button type="button" onclick="window.location.href='../resetpassword/resetpassword.html'">
+        Change/Reset Password
+        </button>
+
+        <label>Shipping Address:</label>
+        <label>Street:</label>
+        <input type="text" name="street" />
+        <label>City:</label>
+        <input type="text" name="city" />
+        <label>State:</label>
+        <input type="text" name="state" />
+        <label>ZIP:</label>
+        <input type="text" name="zip" />
+
+        <label>Payment Card:</label>
+        <label>Card Number:</label>
+        <input type="text" name="card" placeholder="xxxx-xxxx-xxxx-xxxx" />
+        <label>Expiration:</label>
+        <input type="text" name="exp" placeholder="MM/YY" />
+        <label>CVV:</label>
+        <input type="text" name="cvv" placeholder="123" />
+
+        <label>
+          <input type="checkbox" name="promoOptIn" />
+          Receive promotional emails
+        </label>
+
+        <h3>Saved Payment Cards</h3>
+<div id="savedCards"></div>
+
+<button type="button" id="addCardBtn">Add Payment Card</button>
+
+<div id="addCardForm" style="display:none; margin-top:10px;">
+  <label>Card Number:</label>
+  <input type="text" name="newCardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" />
+  <label>Expiration:</label>
+  <input type="text" name="newExp" placeholder="MM/YY" />
+  <label>CVV:</label>
+  <input type="text" name="newCvv" placeholder="123" />
+  <button type="button" id="saveCardBtn">Save Card</button>
+  <button type="button" id="cancelAddCardBtn">Cancel</button>
+</div>
+
+        
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </body>
+</html>

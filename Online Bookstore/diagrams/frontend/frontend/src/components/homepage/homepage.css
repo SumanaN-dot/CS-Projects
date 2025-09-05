@@ -1,0 +1,124 @@
+#banner-image1 {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#banner-image2 {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.homepage-book-title {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #333;
+    text-align: left;
+    margin: 1rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.book-grid .book-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    height: 100%;
+    background-color: #fff;
+}
+
+.book-grid .book-item img {
+    height: 300px;
+    width: auto;
+    max-width: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.book-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-link:hover {
+    text-decoration: underline;
+}
+
+.add-to-cart {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.add-to-cart:hover {
+    background-color: #005fa3;
+}
+
+.carousel-container {
+    position: relative; 
+    overflow: hidden;
+    width: 100%;
+    margin: 1rem 0;
+} 
+
+.carousel-container .book-grid {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-container .book-grid .book-item {
+    flex: 0 0 calc((100% - 4 * 0.5rem) / 5); 
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0077cc;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}

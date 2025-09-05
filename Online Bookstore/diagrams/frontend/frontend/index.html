@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Book Nook</title>
+    <link rel="stylesheet" href="styles/globalstyle.css" />
+    <link rel="stylesheet" href="src/components/homepage/homepage.css" />
+    <link rel="stylesheet" href="src/components/loginpage/loginpage.css" />
+    <script src="src/components/homepage/homepage.js" defer></script>
+    <script src="src/components/loginpage/loginpage.js" defer></script>
+    <script src="src/components/logout_dropdown/logout_dropdown.js" defer></script>
+  </head>
+  <body>
+    <section id="header-message">
+      <p>Register Today! Read Forevermore!</p>
+    </section>
+    <header id="header">
+      <a href="./index.html" id="logo">
+        <img src="src/assets/images/site_logo.png" alt="Logo" id="logo-image" />
+        <span>The Book Nook</span>
+      </a>
+      <form
+        action="src/components/searchpage/searchpage.html"
+        method="GET"
+        id="search-form"
+      >
+        <input
+          type="text"
+          name="query"
+          id="search-input"
+          placeholder="Search by Title, Author, or Genre"
+        />
+        <button type="submit" id="search-button">&#128269;</button>
+      </form>
+      <section id="header-icons">
+        <div class="header-icon" id="open-login">
+          <img
+            src="src/assets/images/account_circle.svg"
+            alt="Login Icon"
+            id="login-icon"
+          />
+          <span id="user-greeting">Login</span>
+        </div>
+
+        <div id="user-dropdown" class="dropdown hidden">
+          <ul>
+            <li>
+              <a href="src/components/editprofile/editProfile.html"
+                >Edit Profile</a
+              >
+            </li>
+            <li>
+              <a href="src/components/shoppingcart/shoppingcart.html"
+                >Shopping Cart</a
+              >
+            </li>
+            <li>
+              <a href="src/components/orderhistory/orderhistorypage.html"
+                >Order History</a
+              >
+            </li>
+            <li class="logout">Logout</li>
+          </ul>
+        </div>
+
+        <div id="admin-dropdown" class="dropdown hidden">
+          <ul>
+            <li>
+              <a href = "src/components/admin/admin.html"
+                >Manage Site</a>
+            </li>
+            <li class="logout">Logout</li>
+          </ul>
+        </div>
+
+        <div class="header-icon">
+          <img
+            src="src/assets/images/shopping_cart.svg"
+            alt="Shopping Cart Icon"
+            id="cart-icon"
+          />
+          <span>Cart (<span id="cart-count">0</span>)</span>
+        </div>
+      </section>
+    </header>
+    <main id="main-content">
+      <img
+        src="src/assets/images/books_banner.jpg"
+        alt="Homepage Banner"
+        id="banner-image1"
+      />
+
+      <section id="featured" class="homepage-book-title">
+        <h2>Featured Books</h2>
+        <div class="carousel-container">
+          <button class="carousel-button carousel-prev">&#10094;</button>
+          <div id="featured-books-container" class="book-grid">
+            <!-- Featured books will be dynamically inserted here -->
+          </div>
+          <button class="carousel-button carousel-next">&#10095;</button>
+        </div>
+      </section>
+
+      <img
+        src="src/assets/images/books_banner2.jpg"
+        alt="Homepage Banner 2"
+        id="banner-image2"
+      />
+
+      <section id="new-releases" class="homepage-book-title">
+        <h2>New Releases</h2>
+        <div class="carousel-container">
+          <button class="carousel-button carousel-prev">&#10094;</button>
+          <div id="new-releases-container" class="book-grid">
+            <!-- New releases will be dynamically inserted here -->
+          </div>
+          <button class="carousel-button carousel-next">&#10095;</button>
+        </div>
+      </section>
+
+      <section id="coming-soon" class="homepage-book-title">
+        <h2>Coming Soon</h2>
+        <div class="carousel-container">
+          <button class="carousel-button carousel-prev">&#10094;</button>
+          <div id="coming-soon-container" class="book-grid">
+            <!-- Coming soon books will be dynamically inserted here -->       
+          </div>
+          <button class="carousel-button carousel-next">&#10095;</button>
+        </div>
+      </section>
+    </main>
+    <div id="login-modal">
+      <div id="login-modal-content">
+        <span id="close">&times;</span>
+
+        <h2 id="login-title">Login or Register</h2>
+        <form id="login-form">
+          <input
+            type="text"
+            id="username_or_email"
+            name="username_or_email"
+            placeholder="Username or Email Address"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <label>
+            <input type="checkbox" id="remember-me" name="remember-me" />
+            <span>Remember Me</span>
+          </label>
+          <button type="submit" id="login-submit">Login & Continue</button>
+        </form>
+        <p id="forgot-password">
+          <a href="/forgot-password">Forgot Password?</a>
+        </p>
+        <p id="register-link">
+          Don't have an account?
+          <a href="src/components/registerpage/registerpage.html"
+            >Register here</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

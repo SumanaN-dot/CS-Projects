@@ -1,0 +1,199 @@
+.checkout-container {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.checkout-section {
+  margin-bottom: 30px;
+  flex-shrink: 0;
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.checkout-section h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.checkout-section label {
+  display: block;
+  margin: 8px 0 4px;
+}
+
+.checkout-section input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#header{
+  position: relative;
+  z-index: 10;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 0 10px;
+  counter-reset: step;
+  z-index: 1;
+}
+
+.step {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: #bbb;
+}
+
+.step::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid #bbb;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background: white;
+}
+
+.step.active::before {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.step.active {
+  color: #007bff;
+}
+
+#checkout-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#to-cart {
+  background-color: #f9f9f9;
+  border: none;
+  color: #007bff;
+}
+
+#to-cart:hover {
+  color: #0056b3;
+}
+
+.navBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  max-width: 200px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navBtn:hover {
+  background-color: #0056b3;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5 ease;
+  width: 100%;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.order-summary-items {
+  margin-bottom: 20px;
+  max-height: 310px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding-right: 5px;
+}
+
+.order-summary-items .book-summary {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
+.book-summary img {
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+}
+
+.book-summary .info {
+  flex-grow: 1;
+}
+
+#confirmationSection {
+  text-align: center;
+}
+
+#confirmation-details {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#promo-code-section {
+  margin-top: 20px;
+}
+
+#promo-code-section input {
+  padding: 8px;
+  width: 60%;
+  margin-right: 10px;
+}
+
+#promo-code-section button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#promo-code-section button:hover {
+  background-color: #0056b3;
+}
+
+#promoMessage {
+  color: green;
+  margin-top: 5px;
+}
+
+#finalTotal {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}

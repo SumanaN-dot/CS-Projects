@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../src/assets/Rubik.ttf') format('truetype');
+}
+
+* {
+    font-family: Rubik, sans-serif !important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    --text-color: #333;
+}
+
+body {
+    color: var(--text-color);
+}
+
+#header-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background: #74b2fd;
+}
+
+#logo {
+    font-weight: bold;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+#logo img {
+    width: 90px;
+    height: auto;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 100px;
+    font-style: italic;
+    background: #eeecf2;
+}
+
+#header-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header-icon img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 4px;
+}
+
+#cart-count {
+    font-weight: bold;
+    color: #0077cc
+}
+
+#search-form {
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+#search-input {
+    flex: 1;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+#search-button {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    height: 48px;
+    background-color: #74b2fd;
+    color: white;
+    border: 1px solid#74b2fd;
+    border-left: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0095ff;
+}
+
+
+.dropdown {
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+}
+
+.dropdown ul li a:hover {
+    background-color: #f0f0f0;
+    color: #0077cc;
+    text-decoration: wavy underline;
+}
+
+.dropdown ul li:last-child {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+}
+
+.dropdown ul li:last-child:hover {
+    background-color: #f0f0f0;
+    color: #ff0000;
+    text-decoration: wavy underline;
+    cursor: pointer;
+}

@@ -1,0 +1,130 @@
+.cart-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cart-items-column {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.cart-item img {
+  width: 70px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.item-quantity {
+  display: inline-flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: sans-serif;
+  margin-left: 1rem;
+}
+
+.item-quantity button,
+.item-quantity span {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.item-quantity button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.item-quantity button:hover {
+  background: #f5f5f5;
+}
+
+.item-quantity span {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.remove-from-cart {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.remove-from-cart:hover {
+  text-decoration: wavy underline;
+}
+
+.cart-summary {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-primary {
+  padding: 0.75rem;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 0.75rem;
+  background: #6074e7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #5059c4;
+}
