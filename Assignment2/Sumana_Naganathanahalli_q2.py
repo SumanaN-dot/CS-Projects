@@ -9,7 +9,7 @@ class Building:
         self.y_coord = y_coord
         self.building_name = building_name
 
-class CampusGraph:
+class Campus:
    
     def __init__(self):
         self.buildings = {}
@@ -40,7 +40,7 @@ class CampusGraph:
         s1 = self.buildings[building1_id]
         s2 = self.buildings[building2_id]
         
-        distance = math.sqrt((s1.x - s2.x)**2 + (s1.y - s2.y)**2)
+        distance = math.sqrt((s1.x_coord - s2.x_coord)**2 + (s1.y_coord - s2.y_coord)**2)
         
         return round(distance)
     
@@ -54,7 +54,7 @@ class CampusGraph:
 
 def load_campus_data(buildings_file, walkways_file):
     
-    graph = CampusGraph()
+    graph = Campus()
     
     
     with open(buildings_file, 'r') as f:
